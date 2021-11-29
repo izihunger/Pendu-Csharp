@@ -30,6 +30,5 @@
         <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150" Margin="712,601,1117,285" Width="100" Height="200"/>
         <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="859,601,953,248" Width="100" Height="200"/>
         <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="1011,601,801,248" Width="100" Height="200" />-->
-
     </Grid>
 </Window>
