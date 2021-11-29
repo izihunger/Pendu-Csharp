@@ -5,9 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_pendu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Jeu du pendu" Height="1080" Width="1920">
+    <Window.Resources>
+        <Style x:Key="formeBlanche" TargetType="Control">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Comic Sans MS" />
+        </Style>
+        <!--Transparence visuel des rectangles-->
+        <Style x:Key="transparence" TargetType="Rectangle">
+            <Setter Property="Opacity" Value="0.2" />
+        </Style>
+
+    </Window.Resources>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="350,174,0,0" VerticalAlignment="Top" Width="75"/>
+        <Image Panel.ZIndex="0" x:Name="image_background" >
+            <Image.Source>
+                <BitmapImage UriSource="far_west.jpg" />
+            </Image.Source>
+        </Image>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="950,531,0,0" Width="75" Height="20" VerticalAlignment="Top"/>
+        <!--<TextBox Background="White" Name="input_jeux" Width="680" Margin="616,811,616,183" />
+        <Rectangle Style="{StaticResource transparence}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Rectangle Style="{StaticResource transparence}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
+        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150" Margin="712,601,1117,285" Width="100" Height="200"/>
+        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="859,601,953,248" Width="100" Height="200"/>
+        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="1011,601,801,248" Width="100" Height="200" />-->
 
     </Grid>
 </Window>
