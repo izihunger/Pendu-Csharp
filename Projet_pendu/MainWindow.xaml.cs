@@ -120,6 +120,7 @@ namespace Projet_pendu
                 }
                 else
                 {
+                    labelMotATrouver.Content = motCacher;
                     MessageBox.Show("Bravo");
                 }
             }
