@@ -24,38 +24,17 @@ namespace Projet_pendu
     {
         List<string> listMot = new List<string>();
         List<char> faussesLettres = new List<char>();
-        int motATrouver = 0;
+        int motATrouver = 2;
         string motCacher;
 
         public MainWindow()
         {
             InitializeComponent();
-            InitTcpClient();
             listMot.Add("U T I L I S A T E U R");
             listMot.Add("S Y S T E M E");
             listMot.Add("B I N A I R E");
             motCacher = CacherMot(listMot[motATrouver]);
             labelMotATrouver.Content = motCacher;
-        }
-
-        public bool InitTcpClient()
-        {
-            bool EtatConnexion;
-            string message = "GAGNE:4";
-            TcpClient client = new TcpClient();
-            client.Connect("10.16.3.214", 53000);
-            if (client.Connected) { EtatConnexion = true; }
-            else { EtatConnexion = false; };
-
-            Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-
-            NetworkStream stream = client.GetStream();
-
-            stream.Write(data, 0, data.Length);
-
-            stream.Close();
-            client.Close();
-            return EtatConnexion;
         }
 
         public bool Comparer_lettre(string motATrouver, char lettre)
@@ -121,7 +100,8 @@ namespace Projet_pendu
                 else
                 {
                     labelMotATrouver.Content = motCacher;
-                    MessageBox.Show("Bravo");
+                    Window1 newWin = new Window1();
+                    newWin.ShowDialog();
                 }
             }
             labelMotATrouver.Content = motCacher;
@@ -151,7 +131,6 @@ namespace Projet_pendu
 
         private void afficher_LettreFausses()
         {
-            StringBuilder sb = new StringBuilder(motCacher);
             string lettre = "";
 
             for (int i = 0; i < faussesLettres.Count; i++)
