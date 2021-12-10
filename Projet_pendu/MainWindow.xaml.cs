@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Sockets;
+using System.Diagnostics;
 
 namespace Projet_pendu
 {
@@ -75,9 +76,10 @@ namespace Projet_pendu
             StringBuilder sb = new StringBuilder(motACacher);
             for (int i = 0; i < motACacher.Length; i++)
             {
+                Trace.WriteLine(sb[i]);
                 if (sb[i] != ' ')
                 {
-                    sb[i] = '_';
+                    sb[i] = '-';
                 }
             }
             return sb.ToString();
