@@ -114,7 +114,14 @@ namespace Projet_pendu
             if (motCacher == listMot[motATrouver])
             {
                 motATrouver++;
-                motCacher = CacherMot(listMot[motATrouver]);
+                if (motATrouver <= 2)
+                {
+                    motCacher = CacherMot(listMot[motATrouver]);
+                }
+                else
+                {
+                    MessageBox.Show("Bravo");
+                }
             }
             labelMotATrouver.Content = motCacher;
         }
