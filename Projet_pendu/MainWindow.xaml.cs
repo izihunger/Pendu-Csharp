@@ -21,10 +21,18 @@ namespace Projet_pendu
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> listMot = new List<string>();
+        int motATrouver = 0;
+        string motCacher;
+
         public MainWindow()
         {
             InitializeComponent();
             InitTcpClient();
+            listMot.Add("UTILISATEUR");
+            listMot.Add("SYSTEME");
+            listMot.Add("BINAIRE");
+            motCacher = CacherMot(listMot[motATrouver]);
         }
 
         public bool InitTcpClient()
@@ -78,34 +86,26 @@ namespace Projet_pendu
             StringBuilder sb = new StringBuilder(motACacher);
             for (int i = 0; i <= motACacher.Length; i++)
             {
-                sb[i] = '*';
+                sb[i] = '_';
             }
             return sb.ToString();
         }
-        
-        public void Traitement()
-        {
-            string mot1 = "utilisateur", mot2 = "systeme", mot3 = "binaire", motCacher, lettreFausses;
-            char lettre;
+
+        public void Traitement(char lettre)
+        {      
             int res = 0;
 
-            motCacher = CacherMot(mot1);
+            
 
-            StringBuilder sb = new StringBuilder(mot1); //faire avec les autres mots
+            StringBuilder sb = new StringBuilder(motCacher); //faire avec les autres mots
 
-            while (motCacher != mot1)
+            while (motCacher != listMot[motATrouver])
             {
-                system("cls");
-                res = 0;
-                std::cout << motCacher << std::endl;
-                std::cout << "Lettre fausses : " << lettreFausses << std::endl; //changer entrée/sortie pour c#
-                std::cout << "Entrez une lettre" << std::endl;
-                std::cin >> lettre;
-                if (Comparer_lettre(mot1, lettre))
+                if (Comparer_lettre(listMot[motATrouver], lettre))
                 {
-                    for (int i = 0; i <= mot1.Length; i++) // changer type et methode
+                    for (int i = 0; i <= listMot[motATrouver].Length; i++) // changer type et methode
                     {
-                        if (mot1[i] == lettre)
+                        if (listMot[motATrouver][i] == lettre)
                         {
                             sb[i] = lettre;
                             res = 1;
@@ -117,6 +117,12 @@ namespace Projet_pendu
                 {
                     lettreFausses.push_back(lettre);
                 }
+            }
+            if (motCacher == listMot[motATrouver])
+            {
+                motATrouver ++;
+                motCacher = CacherMot(listMot[motATrouver]);
+
             }
         }
 
