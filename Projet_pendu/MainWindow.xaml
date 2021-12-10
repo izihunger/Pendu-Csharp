@@ -30,7 +30,7 @@
         <TextBox Background="White" Name="input_jeux" Width="680" Margin="616,811,616,183" KeyDown="input_jeux_KeyDown"/>
         <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
-        <Label Style ="{StaticResource transparenceTiret}" Name="labelMotATrouver" Content="-" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="600" HorizontalAlignment="Center"/>
+        <Label Style ="{StaticResource transparenceTiret}" Name="labelMotATrouver" Content="" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="1035" HorizontalAlignment="Center"/>
 
         <Label Content="Label" HorizontalAlignment="Left" Margin="278,866,0,0" VerticalAlignment="Top"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="376,866,0,0" VerticalAlignment="Top"/>

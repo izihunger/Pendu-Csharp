@@ -47,26 +47,14 @@ namespace Projet_pendu
             else { EtatConnexion = false; };
 
             Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-            //bouton.Content = message;
-
-            // Get a client stream for reading and writing.
-            //Stream stream = client.GetStream();
 
             NetworkStream stream = client.GetStream();
 
-            // Send the message to the connected TcpServer.
             stream.Write(data, 0, data.Length);
 
             stream.Close();
             client.Close();
             return EtatConnexion;
-
-            /*System.IO.StreamWriter writer = new System.IO.StreamWriter(client.GetStream());
-            writer.Write(message);
-            writer.Flush();
-            // Close Connection
-            writer.Close();
-            client.Close();*/
         }
 
         public bool Comparer_lettre(string motATrouver, char lettre)
@@ -99,11 +87,11 @@ namespace Projet_pendu
         {
             int res = 0;
 
-            StringBuilder sb = new StringBuilder(motCacher); //faire avec les autres mots
+            StringBuilder sb = new StringBuilder(motCacher);
 
             if (Comparer_lettre(listMot[motATrouver], lettre))
             {
-                for (int i = 0; i <= listMot[motATrouver].Length; i++) // changer type et methode
+                for (int i = 0; i < listMot[motATrouver].Length; i++)
                 {
                     if (listMot[motATrouver][i] == lettre)
                     {
@@ -139,7 +127,7 @@ namespace Projet_pendu
 
         private void TestBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (input_jeux.Text.Length < 1)
+            if (input_jeux.Text.Length <= 1)
             {
                 Traitement(Convert.ToChar(input_jeux.Text));
             }
