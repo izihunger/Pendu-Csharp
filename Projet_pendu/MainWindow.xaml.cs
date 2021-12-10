@@ -59,10 +59,10 @@ namespace Projet_pendu
             writer.Close();
             client.Close();*/
         }
-        /*
+        
          public bool Comparer_lettre(string motATrouver, char lettre)
         {
-            for (size_t i = 0; i <= motATrouver.size(); i++)
+            for (int i = 0; i <= motATrouver.Length; i++)
             {
                 char lettreMot = motATrouver[i];
                 if (lettre == lettreMot)
@@ -75,11 +75,12 @@ namespace Projet_pendu
         
         public string CacherMot(string motACacher)
         {
-            for (size_t i = 0; i <= motACacher.size(); i++)
+            StringBuilder sb = new StringBuilder(motACacher);
+            for (int i = 0; i <= motACacher.Length; i++)
             {
-                motACacher[i] = '*';
+                sb[i] = '*';
             }
-            return motACacher;
+            return sb.ToString();
         }
         
         public void Traitement()
@@ -89,6 +90,8 @@ namespace Projet_pendu
             int res = 0;
 
             motCacher = CacherMot(mot1);
+
+            StringBuilder sb = new StringBuilder(mot1); //faire avec les autres mots
 
             while (motCacher != mot1)
             {
@@ -100,7 +103,7 @@ namespace Projet_pendu
                 std::cin >> lettre;
                 if (Comparer_lettre(mot1, lettre))
                 {
-                    for (size_t i = 0; i <= mot1.size(); i++) // changer type et methode
+                    for (int i = 0; i <= mot1.Length; i++) // changer type et methode
                     {
                         if (mot1[i] == lettre)
                         {
@@ -115,7 +118,7 @@ namespace Projet_pendu
                     lettreFausses.push_back(lettre);
                 }
             }
-        }*/
+        }
 
         private void input_jeux_KeyDown(object sender, KeyEventArgs e)
         {
