@@ -71,11 +71,7 @@ namespace Projet_pendu
         
          public bool Comparer_lettre(string motATrouver, char lettre)
         {
-<<<<<<< Updated upstream
             for (int i = 0; i <= motATrouver.Length; i++)
-=======
-            for (size_t i = 0; i <= motATrouver.Length; i++)
->>>>>>> Stashed changes
             {
                 char lettreMot = motATrouver[i];
                 if (lettre == lettreMot)
@@ -88,12 +84,8 @@ namespace Projet_pendu
         
         public string CacherMot(string motACacher)
         {
-<<<<<<< Updated upstream
             StringBuilder sb = new StringBuilder(motACacher);
             for (int i = 0; i < motACacher.Length; i++)
-=======
-            for (int i = 0; i <= motACacher.Length; i++)
->>>>>>> Stashed changes
             {
                 if(sb[i] != ' ')
                 {
@@ -115,11 +107,7 @@ namespace Projet_pendu
             {
                 if (Comparer_lettre(listMot[motATrouver], lettre))
                 {
-<<<<<<< Updated upstream
                     for (int i = 0; i <= listMot[motATrouver].Length; i++) // changer type et methode
-=======
-                    for (size_t i = 0; i <= mot1.Length; i++) // changer type et methode
->>>>>>> Stashed changes
                     {
                         if (listMot[motATrouver][i] == lettre)
                         {
