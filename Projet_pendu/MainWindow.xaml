@@ -12,23 +12,31 @@
             <Setter Property="FontFamily" Value="Comic Sans MS" />
         </Style>
         <!--Transparence visuel des rectangles-->
-        <Style x:Key="transparence" TargetType="Rectangle">
+        <Style x:Key="transparenceRectangle" TargetType="Rectangle">
             <Setter Property="Opacity" Value="0.2" />
+        </Style>
+        <Style x:Key="transparenceTiret" TargetType="Label">
+            <Setter Property="Opacity" Value="0.5" />
         </Style>
 
     </Window.Resources>
     <Grid>
-        <Image Panel.ZIndex="0" x:Name="image_background" >
+        <Image Panel.ZIndex="0" x:Name="image_background" Stretch="UniformToFill">
             <Image.Source>
                 <BitmapImage UriSource="far_west.jpg" />
             </Image.Source>
         </Image>
         <Button Content="Button" HorizontalAlignment="Left" Margin="950,531,0,0" Width="75" Height="20" VerticalAlignment="Top"/>
-        <!--<TextBox Background="White" Name="input_jeux" Width="680" Margin="616,811,616,183" />
-        <Rectangle Style="{StaticResource transparence}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        <Rectangle Style="{StaticResource transparence}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
-        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150" Margin="712,601,1117,285" Width="100" Height="200"/>
-        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="859,601,953,248" Width="100" Height="200"/>
-        <Label Style ="{StaticResource formeBlanche}" Content="-" FontSize="150"  Margin="1011,601,801,248" Width="100" Height="200" />-->
+        <TextBox Background="White" Name="input_jeux" Width="680" Margin="616,811,616,183" />
+        <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
+        <Label Style ="{StaticResource transparenceTiret}" Content="-" FontSize="150" Margin="712,601,1117,285" Width="100" Height="200" RenderTransformOrigin="-0.98,0.44"/>
+        <Label Style ="{StaticResource transparenceTiret}" Content="-" FontSize="150"  Margin="859,601,953,248" Width="100" Height="200"/>
+        <Label Style ="{StaticResource transparenceTiret}" Content="-" FontSize="150"  Margin="1011,601,801,248" Width="100" Height="200" />
+        <Label Style ="{StaticResource transparenceTiret}" Content="-" Margin="222,699,-222,301" Width="100" Height="200"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="730,654,0,0" VerticalAlignment="Top"/>
+        
+        <Label Content="Label" HorizontalAlignment="Left" Margin="278,866,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="376,866,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
