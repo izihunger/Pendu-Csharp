@@ -57,5 +57,73 @@ namespace Projet_pendu
             writer.Close();
             client.Close();*/
         }
+
+         public bool Comparer_lettre(string motATrouver, char lettre)
+        {
+            for (size_t i = 0; i <= motATrouver.size(); i++)
+            {
+                char lettreMot = motATrouver[i];
+                if (lettre == lettreMot)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public string CacherMot(string motACacher)
+        {
+            for (size_t i = 0; i <= motACacher.size(); i++)
+            {
+                motACacher[i] = '*';
+            }
+            return motACacher;
+        }
+
+        public void Traitement()
+        {
+            string mot1 = "utilisateur", mot2 = "systeme", mot3 = "binaire", motCacher, lettreFausses;
+            char lettre;
+            int res = 0;
+
+            motCacher = CacherMot(mot1);
+
+            while (motCacher != mot1)
+            {
+                system("cls");
+                res = 0;
+                std::cout << motCacher << std::endl;
+                std::cout << "Lettre fausses : " << lettreFausses << std::endl; //changer entrée/sortie pour c#
+                std::cout << "Entrez une lettre" << std::endl;
+                std::cin >> lettre;
+                if (Comparer_lettre(mot1, lettre))
+                {
+                    for (size_t i = 0; i <= mot1.size(); i++) // changer type et methode
+                    {
+                        if (mot1[i] == lettre)
+                        {
+                            motCacher[i] = lettre;
+                            res = 1;
+                        }
+
+                    }
+                }
+                if (res == 0)
+                {
+                    lettreFausses.push_back(lettre);
+                }
+            }
+        }
+
     }
 }
+
+/*
+ A FAIRE !!!
+
+    Changer les entrées sorties par les évenements
+    Changer le type "size_t"
+    Changer la méthode string.size() par une methode compatible en c#
+    Changer la méthode string.push_back() par une methode compatible en c
+    Ajouter methode gagner() 
+     */
