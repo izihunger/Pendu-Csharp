@@ -95,7 +95,7 @@ namespace Projet_pendu
         {      
             int res = 0;
 
-            
+            List<char> faussesLettres = new List<char>();
 
             StringBuilder sb = new StringBuilder(motCacher); //faire avec les autres mots
 
@@ -115,7 +115,7 @@ namespace Projet_pendu
                 }
                 if (res == 0)
                 {
-                    lettreFausses.push_back(lettre);
+                    faussesLettres.Add(lettre);
                 }
             }
             if (motCacher == listMot[motATrouver])
