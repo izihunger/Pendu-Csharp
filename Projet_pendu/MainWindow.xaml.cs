@@ -27,13 +27,14 @@ namespace Projet_pendu
             InitTcpClient();
         }
 
-        public void InitTcpClient()
+        public bool InitTcpClient()
         {
-            string message = "Bonjour les enfants";
+            bool EtatConnexion;
+            string message = "GAGNE:4";
             TcpClient client = new TcpClient();
-            client.Connect("10.16.2.208", 53000);
-            bouton.Content = client.Connected;
-
+            client.Connect("10.16.3.214", 53000);
+            if (client.Connected) { EtatConnexion = true; }
+            else { EtatConnexion = false; };
 
             Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
             //bouton.Content = message;
@@ -48,6 +49,7 @@ namespace Projet_pendu
 
             stream.Close();
             client.Close();
+            return EtatConnexion;
 
             /*System.IO.StreamWriter writer = new System.IO.StreamWriter(client.GetStream());
             writer.Write(message);
