@@ -60,7 +60,7 @@ namespace Projet_pendu
 
         public bool Comparer_lettre(string motATrouver, char lettre)
         {
-            for (int i = 0; i <= motATrouver.Length; i++)
+            for (int i = 0; i < motATrouver.Length; i++)
             {
                 char lettreMot = motATrouver[i];
                 if (lettre == lettreMot)
@@ -106,6 +106,7 @@ namespace Projet_pendu
             if (res == 0)
             {
                 faussesLettres.Add(lettre);
+                afficher_LettreFausses();
             }
 
             motCacher = sb.ToString();
@@ -139,8 +140,19 @@ namespace Projet_pendu
                 input_jeux.Text = "";
             }
         }
+
+        private void afficher_LettreFausses()
+        {
+            StringBuilder sb = new StringBuilder(motCacher);
+
+            for (int i = 0; i < faussesLettres.Count; i++)
+            {
+                labelLettresFausses.Content = faussesLettres[i];
+            }
+        }
     }
 }
+
 
 /*
  A FAIRE !!!
