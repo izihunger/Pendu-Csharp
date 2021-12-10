@@ -134,6 +134,14 @@ namespace Projet_pendu
             }
             
         }
+
+        private void TestBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(input_jeux.Text.Length < 1)
+            {
+                Traitement(input_jeux.Text.ToCharArray();
+            }
+        }
     }
 }
 
