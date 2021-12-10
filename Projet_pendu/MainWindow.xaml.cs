@@ -22,6 +22,7 @@ namespace Projet_pendu
     public partial class MainWindow : Window
     {
         List<string> listMot = new List<string>();
+        List<char> faussesLettres = new List<char>();
         int motATrouver = 0;
         string motCacher;
 
@@ -97,8 +98,6 @@ namespace Projet_pendu
         public void Traitement(char lettre)
         {
             int res = 0;
-
-            List<char> faussesLettres = new List<char>();
 
             StringBuilder sb = new StringBuilder(motCacher); //faire avec les autres mots
 
