@@ -102,25 +102,25 @@ namespace Projet_pendu
 
             StringBuilder sb = new StringBuilder(motCacher); //faire avec les autres mots
 
-            while (motCacher != listMot[motATrouver])
+            if (Comparer_lettre(listMot[motATrouver], lettre))
             {
-                if (Comparer_lettre(listMot[motATrouver], lettre))
+                for (int i = 0; i <= listMot[motATrouver].Length; i++) // changer type et methode
                 {
-                    for (int i = 0; i <= listMot[motATrouver].Length; i++) // changer type et methode
+                    if (listMot[motATrouver][i] == lettre)
                     {
-                        if (listMot[motATrouver][i] == lettre)
-                        {
-                            sb[i] = lettre;
-                            res = 1;
-                        }
-
+                        sb[i] = lettre;
+                        res = 1;
                     }
-                }
-                if (res == 0)
-                {
-                    faussesLettres.Add(lettre);
+
                 }
             }
+            if (res == 0)
+            {
+                faussesLettres.Add(lettre);
+            }
+
+            motCacher = sb.ToString();
+
             if (motCacher == listMot[motATrouver])
             {
                 motATrouver++;
