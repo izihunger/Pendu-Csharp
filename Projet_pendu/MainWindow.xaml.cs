@@ -122,7 +122,11 @@ namespace Projet_pendu
         {
             if (e.Key.ToString() == "Return")
             {
-                string lettre = input_jeux.Text;
+                if (input_jeux.Text.Length <= 1)
+                {
+                    Traitement(Convert.ToChar(input_jeux.Text.ToUpper()));
+                    input_jeux.Text = "";
+                }
             }
 
         }
@@ -131,7 +135,8 @@ namespace Projet_pendu
         {
             if (input_jeux.Text.Length <= 1)
             {
-                Traitement(Convert.ToChar(input_jeux.Text));
+                Traitement(Convert.ToChar(input_jeux.Text.ToUpper()));
+                input_jeux.Text = "";
             }
         }
     }
