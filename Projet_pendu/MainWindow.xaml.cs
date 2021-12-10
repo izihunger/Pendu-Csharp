@@ -59,7 +59,7 @@ namespace Projet_pendu
             writer.Close();
             client.Close();*/
         }
-
+        /*
          public bool Comparer_lettre(string motATrouver, char lettre)
         {
             for (size_t i = 0; i <= motATrouver.size(); i++)
@@ -72,7 +72,7 @@ namespace Projet_pendu
             }
             return false;
         }
-
+        
         public string CacherMot(string motACacher)
         {
             for (size_t i = 0; i <= motACacher.size(); i++)
@@ -81,7 +81,7 @@ namespace Projet_pendu
             }
             return motACacher;
         }
-
+        
         public void Traitement()
         {
             string mot1 = "utilisateur", mot2 = "systeme", mot3 = "binaire", motCacher, lettreFausses;
@@ -115,8 +115,16 @@ namespace Projet_pendu
                     lettreFausses.push_back(lettre);
                 }
             }
-        }
+        }*/
 
+        private void input_jeux_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key.ToString() == "Return")
+            {
+                label.Content = input_jeux.Text;
+            }
+            
+        }
     }
 }
 
