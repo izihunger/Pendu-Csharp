@@ -36,6 +36,6 @@
         <Label Content="Label" HorizontalAlignment="Left" Margin="376,866,0,0" VerticalAlignment="Top"/>
         <Button Content="Button" Name="TestBtn" HorizontalAlignment="Left" Margin="1388,846,0,0" VerticalAlignment="Top" Width="75" Click="TestBtn_Click"/>
         <Label Content="" Name="labelLettresFausses" HorizontalAlignment="Left" Margin="1388,203,0,0" VerticalAlignment="Top" Height="296" Width="180"/>
-        <Label Content="Lettre fausses :" HorizontalAlignment="Right" Height="36" Margin="0,108,425,0" VerticalAlignment="Top" Width="138"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="1388,175,0,0" TextWrapping="Wrap" Text="Lettres fausses" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
