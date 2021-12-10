@@ -29,10 +29,11 @@ namespace Projet_pendu
         {
             InitializeComponent();
             InitTcpClient();
-            listMot.Add("UTILISATEUR");
-            listMot.Add("SYSTEME");
-            listMot.Add("BINAIRE");
+            listMot.Add("U T I L I S A T E U R");
+            listMot.Add("S Y S T E M E");
+            listMot.Add("B I N A I R E");
             motCacher = CacherMot(listMot[motATrouver]);
+            labelMotATrouver.Content = motCacher;
         }
 
         public bool InitTcpClient()
@@ -84,9 +85,12 @@ namespace Projet_pendu
         public string CacherMot(string motACacher)
         {
             StringBuilder sb = new StringBuilder(motACacher);
-            for (int i = 0; i <= motACacher.Length; i++)
+            for (int i = 0; i < motACacher.Length; i++)
             {
-                sb[i] = '_';
+                if(sb[i] != ' ')
+                {
+                    sb[i] = '_';
+                }  
             }
             return sb.ToString();
         }
@@ -122,7 +126,7 @@ namespace Projet_pendu
             {
                 motATrouver ++;
                 motCacher = CacherMot(listMot[motATrouver]);
-
+                labelMotATrouver.Content = motCacher;
             }
         }
 
@@ -130,7 +134,7 @@ namespace Projet_pendu
         {
             if (e.Key.ToString() == "Return")
             {
-                label.Content = input_jeux.Text;
+                string lettre = input_jeux.Text;
             }
             
         }
