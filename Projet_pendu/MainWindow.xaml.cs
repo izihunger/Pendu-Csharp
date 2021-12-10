@@ -143,7 +143,7 @@ namespace Projet_pendu
         {
             if(input_jeux.Text.Length < 1)
             {
-                Traitement(input_jeux.Text.ToCharArray();
+                Traitement(Convert.ToChar(input_jeux.Text));
             }
         }
     }
