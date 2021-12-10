@@ -107,7 +107,7 @@ namespace Projet_pendu
                     {
                         if (mot1[i] == lettre)
                         {
-                            motCacher[i] = lettre;
+                            sb[i] = lettre;
                             res = 1;
                         }
 
