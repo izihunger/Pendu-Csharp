@@ -63,13 +63,12 @@ namespace Projet_pendu
             /*System.IO.StreamWriter writer = new System.IO.StreamWriter(client.GetStream());
             writer.Write(message);
             writer.Flush();
-
             // Close Connection
             writer.Close();
             client.Close();*/
         }
-        
-         public bool Comparer_lettre(string motATrouver, char lettre)
+
+        public bool Comparer_lettre(string motATrouver, char lettre)
         {
             for (int i = 0; i <= motATrouver.Length; i++)
             {
@@ -81,22 +80,22 @@ namespace Projet_pendu
             }
             return false;
         }
-        
+
         public string CacherMot(string motACacher)
         {
             StringBuilder sb = new StringBuilder(motACacher);
             for (int i = 0; i < motACacher.Length; i++)
             {
-                if(sb[i] != ' ')
+                if (sb[i] != ' ')
                 {
                     sb[i] = '_';
-                }  
+                }
             }
             return sb.ToString();
         }
 
         public void Traitement(char lettre)
-        {      
+        {
             int res = 0;
 
             List<char> faussesLettres = new List<char>();
@@ -124,10 +123,10 @@ namespace Projet_pendu
             }
             if (motCacher == listMot[motATrouver])
             {
-                motATrouver ++;
+                motATrouver++;
                 motCacher = CacherMot(listMot[motATrouver]);
-                labelMotATrouver.Content = motCacher;
             }
+            labelMotATrouver.Content = motCacher;
         }
 
         private void input_jeux_KeyDown(object sender, KeyEventArgs e)
@@ -136,12 +135,12 @@ namespace Projet_pendu
             {
                 string lettre = input_jeux.Text;
             }
-            
+
         }
 
         private void TestBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(input_jeux.Text.Length < 1)
+            if (input_jeux.Text.Length < 1)
             {
                 Traitement(Convert.ToChar(input_jeux.Text));
             }
@@ -151,7 +150,6 @@ namespace Projet_pendu
 
 /*
  A FAIRE !!!
-
     Changer les entrées sorties par les évenements
     Changer le type "size_t"
     Changer la méthode string.size() par une methode compatible en c#
