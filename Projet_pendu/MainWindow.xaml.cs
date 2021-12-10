@@ -139,11 +139,13 @@ namespace Projet_pendu
         private void afficher_LettreFausses()
         {
             StringBuilder sb = new StringBuilder(motCacher);
+            string lettre = "";
 
             for (int i = 0; i < faussesLettres.Count; i++)
             {
-                labelLettresFausses.Content = faussesLettres[i];
+                lettre += faussesLettres[i].ToString();
             }
+            labelLettresFausses.Content = lettre;
         }
     }
 }
