@@ -122,7 +122,7 @@ namespace Projet_pendu
             {
                 motATrouver ++;
                 motCacher = CacherMot(listMot[motATrouver]);
-
+                labelMotATrouver.content = motCacher;
             }
         }
 
