@@ -123,7 +123,7 @@ namespace Projet_pendu
                     afficher_pendu(faussesLettres.Count());
                     if(faussesLettres.Count() == 9)
                     {                        
-                        MessageBox.Show("Vous avez perdu ! Fermez la fenêtre pour recommencer");
+                        MessageBox.Show("Vous avez perdu ! Appuyez sur OK pour recommencer");
                         setDefaultWindow();
                     }
                 }
