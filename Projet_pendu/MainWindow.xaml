@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_pendu"
         mc:Ignorable="d"
-        Title="Jeu du pendu" Height="1080" Width="1920">
+        d:DesignWidth ="1920" d:DesignHeight ="1080"
+        Title="Jeu du pendu" WindowState="Maximized" WindowStyle="None">
     <Window.Resources>
         <Style x:Key="formeBlanche" TargetType="Control">
             <Setter Property="Foreground" Value="White" />
@@ -21,20 +22,63 @@
 
     </Window.Resources>
     <Grid>
-        <Image Panel.ZIndex="0" x:Name="image_background" Stretch="UniformToFill">
+        <TextBox Panel.ZIndex="2" Background="White" Name="input_jeux" Width="680" Margin="620,796,620,198" KeyDown="input_jeux_KeyDown"/>
+        <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360"/>
+        <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
+        <Label Panel.ZIndex="2" Style ="{StaticResource transparenceTiret}" Name="labelMotATrouver" Content="" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="1035" HorizontalAlignment="Center"/>
+
+        <Button Panel.ZIndex="2" Content="Button" Name="TestBtn" HorizontalAlignment="Left" Margin="1388,846,0,0" VerticalAlignment="Top" Width="75" Click="TestBtn_Click"/>
+        <Label Panel.ZIndex="2" Content="" Name="labelLettresFausses" HorizontalAlignment="Left" Margin="1388,203,0,0" VerticalAlignment="Top" Height="296" Width="180"/>
+        <Label Panel.ZIndex="2" Content="Lettres fausses :" HorizontalAlignment="Right" Height="36" Margin="0,105,464,0" VerticalAlignment="Top" Width="102"/>
+        <Image Panel.ZIndex="1" x:Name="image_background" Stretch="UniformToFill">
             <Image.Source>
                 <BitmapImage UriSource="far_west.jpg" />
             </Image.Source>
         </Image>
-        <TextBox Background="White" Name="input_jeux" Width="680" Margin="616,811,616,183" KeyDown="input_jeux_KeyDown"/>
-        <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        <Rectangle Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
-        <Label Style ="{StaticResource transparenceTiret}" Name="labelMotATrouver" Content="" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="1035" HorizontalAlignment="Center"/>
-
-        <Label Content="Label" HorizontalAlignment="Left" Margin="278,866,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="376,866,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" Name="TestBtn" HorizontalAlignment="Left" Margin="1388,846,0,0" VerticalAlignment="Top" Width="75" Click="TestBtn_Click"/>
-        <Label Content="" Name="labelLettresFausses" HorizontalAlignment="Left" Margin="1388,203,0,0" VerticalAlignment="Top" Height="296" Width="180"/>
-        <Label Content="Lettres fausses :" HorizontalAlignment="Right" Height="36" Margin="0,105,464,0" VerticalAlignment="Top" Width="102"/>
+        <Image Panel.ZIndex="0"  x:Name="erreur1" Margin="-103,53,844,441" Height="570" d:LayoutOverrides="VerticalAlignment">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_1.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0" x:Name="erreur2" Margin="315,41,876,778">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_2.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0" x:Name="erreur3" Margin="565,62,704,800">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_3.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur4" Margin="667,163,819,753">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_4.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur5" Margin="505,205,686,613">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_5.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur6" Margin="466,152,725,666" Width="729" d:LayoutOverrides="HorizontalAlignment">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_6.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur7" Margin="582,184,681,685" Width="657" d:LayoutOverrides="HorizontalAlignment">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_7.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur8" Margin="552,322,769,567">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_8.png" />
+            </Image.Source>
+        </Image>
+        <Image Panel.ZIndex="0"  x:Name="erreur9" Margin="461,291,745,543" Height="230" Width="714" d:LayoutOverrides="HorizontalAlignment">
+            <Image.Source>
+                <BitmapImage UriSource="erreur_9.png" />
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>
