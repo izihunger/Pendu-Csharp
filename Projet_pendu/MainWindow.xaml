@@ -22,17 +22,17 @@
 
     </Window.Resources>
     <Grid>
-        <TextBox Panel.ZIndex="2" Background="White" Name="input_jeux" Width="680" Margin="620,796,620,198" KeyDown="input_jeux_KeyDown"/>
+        <TextBox Panel.ZIndex="2" FontSize="45" Background="White" FontFamily="Playbill" Name="input_jeux" Width="187" Margin="710,733,0,294" KeyDown="input_jeux_KeyDown" HorizontalAlignment="Left"/>
         <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360"/>
         <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
-        <Label Panel.ZIndex="2" Style ="{StaticResource transparenceTiret}" x:Name="labelMot" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="1035" HorizontalAlignment="Center"/>
+        <Label Panel.ZIndex="2" Foreground="Yellow" HorizontalContentAlignment="Center" x:Name="labelMot" FontFamily="Playbill" FontSize="90" Margin="438,872,438,0" Height="200" Width="1036" HorizontalAlignment="Center"/>
 
-        <Button Panel.ZIndex="2" Content="Button" Name="TestBtn" HorizontalAlignment="Left" Margin="1388,846,0,0" VerticalAlignment="Top" Width="75" Click="TestBtn_Click"/>
-        <Label Panel.ZIndex="2" Content="" Name="labelLettresFausses" HorizontalAlignment="Left" Margin="1388,203,0,0" VerticalAlignment="Top" Height="296" Width="180"/>
-        <Label Panel.ZIndex="2" Content="Lettres fausses :" HorizontalAlignment="Right" Height="36" Margin="0,105,464,0" VerticalAlignment="Top" Width="102"/>
+        <Button Panel.ZIndex="2" FontSize="30" Content="Tester lettre" Name="TestBtn" FontFamily="Playbill" HorizontalAlignment="Left" Margin="1004,733,0,0" VerticalAlignment="Top" Width="117" Click="TestBtn_Click" Height="45"/>
+        <Label Panel.ZIndex="2" Content="" FontFamily="Playbill" Name="labelLettresFausses" FontSize="35" HorizontalAlignment="Left" Margin="1327,205,0,0" VerticalAlignment="Top" Height="135" Width="323"/>
+        <Label Panel.ZIndex="2" Content="Lettres fausses :" FontFamily="Playbill" FontSize="45" HorizontalAlignment="Right" Height="74" Margin="0,98,262,0" VerticalAlignment="Top" Width="323"/>
         <Image Panel.ZIndex="1" x:Name="image_background" Stretch="UniformToFill">
             <Image.Source>
-                <BitmapImage UriSource="far_west.jpg" />
+                <BitmapImage UriSource="western.jpeg" />
             </Image.Source>
         </Image>
         <Image Panel.ZIndex="0"  x:Name="erreur1" Margin="-103,53,844,441" Height="570" d:LayoutOverrides="VerticalAlignment">

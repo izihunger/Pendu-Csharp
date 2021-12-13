@@ -59,7 +59,6 @@ namespace Projet_pendu
             }
             motATrouver = 0;
             motCacher = CacherMot(listMot[motATrouver]);
-            Trace.WriteLine(motCacher);
             labelLettresFausses.Content = "";
         }
 
@@ -124,7 +123,7 @@ namespace Projet_pendu
                     afficher_pendu(faussesLettres.Count());
                     if(faussesLettres.Count() == 9)
                     {                        
-                        MessageBox.Show("Vous avez perdu ! Fermez la fenêtre pour recommencer");
+                        MessageBox.Show("Vous avez perdu ! Appuyez sur OK pour recommencer");
                         setDefaultWindow();
                     }
                 }
@@ -150,6 +149,7 @@ namespace Projet_pendu
                     labelMot.Content = motCacher;
                     Window1 newWin = new Window1();
                     newWin.ShowDialog();
+                    setDefaultWindow();
                 }
             }
             labelMot.Content = motCacher;
@@ -167,8 +167,8 @@ namespace Projet_pendu
                 if (input_jeux.Text.Length == 1)
                 {
                     Traitement(Convert.ToChar(input_jeux.Text.ToUpper()));
-                    input_jeux.Text = "";
                 }
+                input_jeux.Text = "";
             }
         }
 
@@ -177,8 +177,8 @@ namespace Projet_pendu
             if (input_jeux.Text.Length == 1)
             {
                 Traitement(Convert.ToChar(input_jeux.Text.ToUpper()));
-                input_jeux.Text = "";
             }
+            input_jeux.Text = "";
         }
 
         private void afficher_LettreFausses()
@@ -187,7 +187,7 @@ namespace Projet_pendu
 
             for (int i = 0; i < faussesLettres.Count; i++)
             {
-                lettre += faussesLettres[i].ToString();
+                lettre += faussesLettres[i].ToString() + " ";
             }
             labelLettresFausses.Content = lettre;
         }

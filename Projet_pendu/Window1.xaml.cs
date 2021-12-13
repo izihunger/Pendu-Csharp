@@ -43,9 +43,10 @@ namespace Projet_pendu
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "USB")
+            if (textBox.Text.ToUpper() == "USB")
             {
                 EnvoiTcpClient();
+                this.Close();
             }
         }
     }

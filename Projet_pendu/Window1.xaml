@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_pendu"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="450" Width="800" WindowStartupLocation="CenterOwner">
     <Grid>
-        <Button Name="btn" Content="Validez" Height="55" Margin="268,0,268,117" VerticalAlignment="Bottom" Click="Button_Click"/>
-        <Label Name="label" Content="Entrez les initiales des trois mots que vous venez de trouver." Height="114" Margin="60,50,-72,0" VerticalAlignment="Top" FontSize="25"/>
-        <TextBox Name="textBox" Height="57" Margin="218,136,211,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
+        <Button Panel.ZIndex="1" FontSize="35" Name="btn" Content="Validez" Height="55" Margin="288,0,289,110" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Label Panel.ZIndex="1" Name="label" Content="Entrez les initiales des trois mots que vous venez de trouver." Height="114" Margin="60,50,-72,0" VerticalAlignment="Top" FontSize="25"/>
+        <TextBox Panel.ZIndex="1" HorizontalContentAlignment="Center" FontSize="35" Name="textBox" Height="57" Margin="274,151,273,0" TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.5"/>
+        <Image Panel.ZIndex="0" x:Name="image_background" Margin="-117,-189,-131,-73">
+            <Image.Source>
+                <BitmapImage UriSource="farWest.jpg" />
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>
