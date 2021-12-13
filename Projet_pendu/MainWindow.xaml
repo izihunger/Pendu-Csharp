@@ -22,63 +22,66 @@
 
     </Window.Resources>
     <Grid>
-        <TextBox Panel.ZIndex="2" Background="White" Name="input_jeux" Width="680" Margin="620,796,620,198" KeyDown="input_jeux_KeyDown"/>
+        <TextBox Panel.ZIndex="2" FontSize="45" Background="White" FontFamily="Playbill" Name="input_jeux" Width="186" Margin="486,733,0,294" KeyDown="input_jeux_KeyDown" HorizontalAlignment="Left"/>
         <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5" Height="508" Margin="1308,53,244,488" Stroke="Black" Width="360"/>
         <Rectangle Panel.ZIndex="2" Style="{StaticResource transparenceRectangle}" Fill="#FFF4F4F5"  Height="508" Margin="250,53,686,488" Stroke="Black"  Width="976"/>
-        <Label Panel.ZIndex="2" Style ="{StaticResource transparenceTiret}" x:Name="labelMot" FontSize="70" Margin="0, 300, 0, 0" Height="200" Width="1035" HorizontalAlignment="Center"/>
+        <Rectangle Panel.ZIndex="2" Opacity="0.7" Fill="SandyBrown" Margin="0,0,244,86" Stroke="Black" HorizontalAlignment="Right" Height="359" VerticalAlignment="Bottom" Width="360"/>
+        <Label Panel.ZIndex="2" Foreground="Yellow" HorizontalContentAlignment="Center" x:Name="labelMot" FontFamily="Playbill" FontSize="90" Margin="218,872,658,0" Height="200"/>
 
-        <Button Panel.ZIndex="2" Content="Button" Name="TestBtn" HorizontalAlignment="Left" Margin="1388,846,0,0" VerticalAlignment="Top" Width="75" Click="TestBtn_Click"/>
-        <Label Panel.ZIndex="2" Content="" Name="labelLettresFausses" HorizontalAlignment="Left" Margin="1388,203,0,0" VerticalAlignment="Top" Height="296" Width="180"/>
-        <Label Panel.ZIndex="2" Content="Lettres fausses :" HorizontalAlignment="Right" Height="36" Margin="0,105,464,0" VerticalAlignment="Top" Width="102"/>
+        <Button Panel.ZIndex="2" FontSize="30" Content="Tester lettre" Name="TestBtn" FontFamily="Playbill" HorizontalAlignment="Left" Margin="779,733,0,0" VerticalAlignment="Top" Width="117" Click="TestBtn_Click" Height="45" d:LayoutOverrides="HorizontalAlignment"/>
+        <Label Panel.ZIndex="2" Content="" FontFamily="Playbill" Name="labelLettresFausses" FontSize="35" HorizontalAlignment="Left" Margin="1327,205,0,0" VerticalAlignment="Top" Height="135" Width="323"/>
+        <Label Panel.ZIndex="2" Content="Lettres fausses :" FontFamily="Playbill" FontSize="45" HorizontalAlignment="Right" Height="74" Margin="0,98,262,0" VerticalAlignment="Top" Width="323"/>
         <Image Panel.ZIndex="1" x:Name="image_background" Stretch="UniformToFill">
             <Image.Source>
-                <BitmapImage UriSource="far_west.jpg" />
+                <BitmapImage UriSource="western.jpeg" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur1" Margin="-103,53,844,441" Height="570" d:LayoutOverrides="VerticalAlignment">
+        <Image Panel.ZIndex="0" x:Name="erreur1" Margin="-112,57,838,426" d:LayoutOverrides="VerticalAlignment">
             <Image.Source>
                 <BitmapImage UriSource="erreur_1.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0" x:Name="erreur2" Margin="315,41,876,778">
+        <Image Panel.ZIndex="0" x:Name="erreur2" Margin="320,43,871,776">
             <Image.Source>
                 <BitmapImage UriSource="erreur_2.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0" x:Name="erreur3" Margin="565,62,704,800">
+        <Image Panel.ZIndex="0" x:Name="erreur3" Margin="565,64,704,798">
             <Image.Source>
                 <BitmapImage UriSource="erreur_3.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur4" Margin="667,163,819,753">
+        <Image Panel.ZIndex="0" x:Name="erreur4" Margin="667,169,819,747">
             <Image.Source>
                 <BitmapImage UriSource="erreur_4.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur5" Margin="505,205,686,613">
+        <Image Panel.ZIndex="0" x:Name="erreur5" Margin="505,215,686,603">
             <Image.Source>
                 <BitmapImage UriSource="erreur_5.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur6" Margin="466,152,725,666" Width="729" d:LayoutOverrides="HorizontalAlignment">
+        <Image Panel.ZIndex="0" x:Name="erreur6" Margin="463,154,720,664" Width="729" d:LayoutOverrides="HorizontalAlignment">
             <Image.Source>
                 <BitmapImage UriSource="erreur_6.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur7" Margin="582,184,681,685" Width="657" d:LayoutOverrides="HorizontalAlignment">
+        <Image Panel.ZIndex="0" x:Name="erreur7" Margin="580,185,675,684" Width="657" d:LayoutOverrides="HorizontalAlignment">
             <Image.Source>
                 <BitmapImage UriSource="erreur_7.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur8" Margin="552,322,769,567">
+        <Image Panel.ZIndex="0" x:Name="erreur8" Margin="553,332,768,557">
             <Image.Source>
                 <BitmapImage UriSource="erreur_8.png" />
             </Image.Source>
         </Image>
-        <Image Panel.ZIndex="0"  x:Name="erreur9" Margin="461,291,745,543" Height="230" Width="714" d:LayoutOverrides="HorizontalAlignment">
+        <Image Panel.ZIndex="0" x:Name="erreur9" Margin="457,310,741,532" Height="230" Width="714" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
             <Image.Source>
                 <BitmapImage UriSource="erreur_9.png" />
             </Image.Source>
         </Image>
+        <Label Panel.ZIndex="2" FontFamily="Rockwell" Foreground="Black" FontSize="21" Content="- Le but du jeu est de trouver&#x0a;trois mots liés à l'informatique.&#x0a;&#x0a;- Pour ce faire vous ne pouvez&#x0a;entrer dans la zone de texte&#x0a;qu'une lettre à la fois.&#x0a;&#x0a;- Retenez bien les mots devinés,&#x0a;ils vous seront utiles." HorizontalAlignment="Right" Margin="0,0,262,112" VerticalAlignment="Bottom" Height="255" Width="323"/>
+        <Label Panel.ZIndex="2" Foreground="Black" FontSize="45" Content="Règles du jeu :" FontFamily="Playbill" HorizontalAlignment="Right" Height="59" Margin="0,0,262,367" VerticalAlignment="Bottom" Width="323"/>
     </Grid>
 </Window>

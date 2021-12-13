@@ -115,5 +115,11 @@
     <Resource Include="erreur_8.png" />
     <Resource Include="erreur_9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="western.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="farWest.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
