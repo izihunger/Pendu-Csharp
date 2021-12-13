@@ -104,5 +104,16 @@
   <ItemGroup>
     <Resource Include="far_west.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="erreur_1.png" />
+    <Resource Include="erreur_2.png" />
+    <Resource Include="erreur_3.png" />
+    <Resource Include="erreur_4.png" />
+    <Resource Include="erreur_5.png" />
+    <Resource Include="erreur_6.png" />
+    <Resource Include="erreur_7.png" />
+    <Resource Include="erreur_8.png" />
+    <Resource Include="erreur_9.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
