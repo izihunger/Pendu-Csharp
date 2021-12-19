@@ -1,0 +1,17 @@
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\bin\Debug\Projet_pendu.exe.config
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\bin\Debug\Projet_pendu.exe
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\bin\Debug\Projet_pendu.pdb
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.csproj.AssemblyReference.cache
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\MainWindow.g.cs
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Window1.g.cs
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\App.g.cs
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu_MarkupCompile.cache
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu_MarkupCompile.lref
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\MainWindow.baml
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Window1.baml
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.g.resources
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.Properties.Resources.resources
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.csproj.GenerateResource.cache
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.csproj.CoreCompileInputs.cache
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.exe
+C:\Users\spaz\Documents\VS Programs\Pendu-Csharp\Projet_pendu\obj\Debug\Projet_pendu.pdb
